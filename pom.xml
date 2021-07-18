@@ -141,7 +141,8 @@
             <goals>
               <goal>build-info</goal>
             </goals>
-            <configuration>
+	    <configuration>
+	    <forkCount>0</forkCount>
               <additionalProperties>
                 <encoding.source>${project.build.sourceEncoding}</encoding.source>
                 <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
@@ -206,7 +207,8 @@
             </goals>
           </execution>
         </executions>
-        <configuration>
+	<configuration>
+	<forkCount>0</forkCount>
           <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
           <cssDestinationFolder>${project.build.directory}/classes/static/resources/css</cssDestinationFolder>
           <wroFile>${basedir}/src/main/wro/wro.xml</wroFile>
