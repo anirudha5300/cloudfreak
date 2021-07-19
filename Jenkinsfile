@@ -4,13 +4,15 @@ pipeline {
       maven 'Default'
                  jdk 'JAVA'
     }
-    stages {      
+    stages {     
+/* 
         stage('Build maven ') {
             steps { 
                     sh 'pwd'      
                     sh 'mvn  clean install package -Dmaven.test.skip=true'
             }
         }
+*/
         
         stage('Copy Artifact') {
            steps { 
