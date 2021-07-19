@@ -130,7 +130,7 @@
   </dependencies>
 
   <build>
-    <plugins>
+      <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -142,7 +142,8 @@
               <goal>build-info</goal>
             </goals>
 	    <configuration>
-	    <forkCount>0</forkCount>
+              <forkCount>2</forkCount>
+	      <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
               <additionalProperties>
                 <encoding.source>${project.build.sourceEncoding}</encoding.source>
                 <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
@@ -208,7 +209,8 @@
           </execution>
         </executions>
 	<configuration>
-	<forkCount>0</forkCount>
+	<forkCount>2</forkCount>
+	 <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
           <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
           <cssDestinationFolder>${project.build.directory}/classes/static/resources/css</cssDestinationFolder>
           <wroFile>${basedir}/src/main/wro/wro.xml</wroFile>
